@@ -4,8 +4,8 @@ require("dotenv").config();
 let saved;
 module.exports = defineConfig({
   env: {
-    googleClientId: process.env.REACT_APP_GOOGLE_CLIENTID,
-    googleClientSecret: process.env.REACT_APP_GOOGLE_CLIENT_SECRET,
+    googleClientId: process.env.GOOGLE_CLIENTID,
+    googleClientSecret: process.env.GOOGLE_CLIENT_SECRET,
     googleRefreshToken: process.env.GOOGLE_REFRESH_TOKEN,
     email: "jtstccnt@gmail.com",
     password: "TestAcctAutomati0n",
