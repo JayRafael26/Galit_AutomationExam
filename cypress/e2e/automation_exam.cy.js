@@ -12,7 +12,7 @@ const languages = ["Filipino", "Dutch", "Japanese", "Korean", "French"];
 
 describe("Galit Automation Exam - Google Translate Tests", () => {
   before(() => {
-    cy.loginByGoogleApi();
+    cy.login(Cypress.env('email'), Cypress.env('password'))
     cy.visit("/");
   });
 
