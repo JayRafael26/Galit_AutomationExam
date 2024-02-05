@@ -14,7 +14,7 @@ class ImageTranslationPage {
   }
 
   clickBrowseFilesButton() {
-    this.elements.browseFilesBtn().click({force: true});
+    this.elements.browseFilesBtn().click({ force: true });
   }
 
   uploadImage(imagePath) {
@@ -23,20 +23,20 @@ class ImageTranslationPage {
     });
   }
 
-  validateCopyTextButton(){
-    this.elements.copyTextBtn().should('exist')
+  validateCopyTextButton() {
+    this.elements.copyTextBtn().should("exist");
   }
 
-  validateDownloadTranslationButton(){
-    this.elements.downloadTranslationBtn().should('exist')
+  validateDownloadTranslationButton() {
+    this.elements.downloadTranslationBtn().should("exist");
   }
 
-  validateClearImageButton(){
-    this.elements.clearImageBtn().should('exist')
+  validateClearImageButton() {
+    this.elements.clearImageBtn().should("exist");
   }
 
-  validateImage(){
-    this.elements.image().should('exist')
+  validateImage() {
+    this.elements.image().should("exist");
   }
 }
 

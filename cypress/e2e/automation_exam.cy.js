@@ -8,13 +8,11 @@ const historyPage = new HistoryPage();
 const savedPage = new SavedPage();
 const imageTranslationPage = new ImageTranslationPage();
 
-const email = "jtstccnt@gmail.com";
-const pass = "TestAcctAutomati0n";
 const languages = ["Filipino", "Dutch", "Japanese", "Korean", "French"];
 
 describe("Galit Automation Exam - Google Translate Tests", () => {
   before(() => {
-    cy.login(email, pass);
+    cy.loginByGoogleApi();
     cy.visit("/");
   });
 
@@ -92,9 +90,8 @@ describe("Galit Automation Exam - Google Translate Tests", () => {
     historyPage.closeHistoryPage();
     imageTranslationPage.clickImageButton();
     imageTranslationPage.clickBrowseFilesButton();
-    imageTranslationPage.uploadImage(
-      "/Galit_TechnicalExam/cypress/fixtures/sample_img.png"
-    );
+
+    imageTranslationPage.uploadImage("cypress/fixtures/sample_img.png");
 
     imageTranslationPage.validateCopyTextButton();
     imageTranslationPage.validateDownloadTranslationButton();

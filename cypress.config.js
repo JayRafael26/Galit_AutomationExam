@@ -1,7 +1,15 @@
 const { defineConfig } = require("cypress");
-let saved;
+require("dotenv").config();
 
+let saved;
 module.exports = defineConfig({
+  env: {
+    googleClientId: process.env.REACT_APP_GOOGLE_CLIENTID,
+    googleClientSecret: process.env.REACT_APP_GOOGLE_CLIENT_SECRET,
+    googleRefreshToken: process.env.GOOGLE_REFRESH_TOKEN,
+    email: "jtstccnt@gmail.com",
+    password: "TestAcctAutomati0n",
+  },
   e2e: {
     baseUrl: "https://translate.google.com/",
     watchForFileChanges: false,
